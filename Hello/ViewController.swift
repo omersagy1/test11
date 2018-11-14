@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var GreenSlider: UISlider!
     @IBOutlet weak var BlueSlider: UISlider!
 
+    @IBOutlet weak var resetButton: UIButton!
+
     var labels: [UILabel?] = []
 
     override func viewDidLoad() {
@@ -34,6 +36,13 @@ class ViewController: UIViewController {
             GreenLabel,
             BlueLabel,
         ]
+
+        resetButton.addTarget(
+            self,
+            action: #selector(resetButtonTapped(_:)),
+            for: .touchUpInside
+        )
+
         render()
     }
 
@@ -46,6 +55,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func blueChanged(_ sender: UISlider) {
+        render()
+    }
+
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        RedSlider.setValue(0.5, animated: true)
+        GreenSlider.setValue(0.5, animated: true)
+        BlueSlider.setValue(0.5, animated: true)
         render()
     }
 

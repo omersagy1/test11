@@ -88,6 +88,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqG-Jf-mTW">
+                                <rect key="frame" x="153" y="483" width="100" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -103,6 +108,7 @@
                         <outlet property="RedSlider" destination="osY-lC-p2L" id="Qyf-Wx-TOe"/>
                         <outlet property="RgbLabel" destination="dZT-US-yPW" id="3LQ-k4-LGK"/>
                         <outlet property="RgbValue" destination="pDg-Hy-gPr" id="TeE-Qu-tTc"/>
+                        <outlet property="resetButton" destination="cqG-Jf-mTW" id="Zf0-oo-mFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
