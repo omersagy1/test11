@@ -104,11 +104,11 @@ class ViewController: UIViewController {
     }
 
     func rgbValue() -> String {
-        let r = String(format: DECIMAL_FORMAT,
+        let r = String(format: FormatConstant.DECIMAL,
                        arguments: [self.red * 255.0])
-        let g = String(format: DECIMAL_FORMAT,
+        let g = String(format: FormatConstant.DECIMAL,
                        arguments: [self.green * 255.0])
-        let b = String(format: DECIMAL_FORMAT,
+        let b = String(format: FormatConstant.DECIMAL,
                        arguments: [self.blue * 255.0])
         return "\(r), \(g), \(b)"
     }
@@ -116,16 +116,16 @@ class ViewController: UIViewController {
     func hexValue() -> String {
         let redInt = Int((self.red * 255.0).rounded())
         let r = String(
-            format: HEX_FORMAT,
+            format: FormatConstant.HEX,
             arguments: [redInt])
 
         let greenInt = Int((self.green * 255.0).rounded())
         let g = String(
-            format: HEX_FORMAT,
+            format: FormatConstant.HEX,
             arguments: [greenInt])
 
         let blueInt = Int((self.blue * 255.0).rounded())
-        let b = String(format: HEX_FORMAT,
+        let b = String(format: FormatConstant.HEX,
                        arguments: [blueInt])
         return "#\(r)\(g)\(b)"
     }
@@ -133,5 +133,3 @@ class ViewController: UIViewController {
 }
 
 
-let HEX_FORMAT = "%02X"
-let DECIMAL_FORMAT = "%.1f"
